@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+models/*.onnx
+base_datos/*
+!base_datos/.gitkeep
+basefotos/
+para comparar/
+memoria *.md
