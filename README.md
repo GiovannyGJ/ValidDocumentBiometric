@@ -1,6 +1,6 @@
-# Comparador facial local
+# ValidDocumentBiometric
 
-Aplicación personal que obtiene el número de identificación del nombre de un archivo JPG/PNG/DOCX, busca su foto en una carpeta local y compara ambos rostros. En DOCX también puede leer el número del texto y revisar las imágenes incrustadas. Todo se ejecuta localmente; no se usa OCR ni API externa, y no se cobra por comparación. Para instalar dependencias y descargar los modelos se necesita conexión a Internet.
+API local de comparación facial que obtiene un número de identificación de 8 o 9 dígitos del nombre del archivo, busca su foto en una base local y compara ambos rostros. Desarrollada con Python, FastAPI y modelos de OpenCV; no utiliza servicios externos de reconocimiento.
 
 ## Requisitos
 
@@ -12,7 +12,7 @@ Aplicación personal que obtiene el número de identificación del nombre de un 
 Abre PowerShell en esta carpeta y ejecuta:
 
 ```powershell
-py -m venv .venv
+python -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python download_models.py
@@ -23,7 +23,7 @@ Luego abre <http://127.0.0.1:8000>. La documentación local de la API está en <
 
 ## Fotos de referencia
 
-Guarda una foto JPG, JPEG o PNG por persona en la carpeta `base_datos` situada junto a `server.py`. El nombre del archivo debe ser el DNI español, por ejemplo:
+Guarda una foto JPG, JPEG o PNG por persona en la carpeta `base_datos` situada junto a `server.py`. El nombre del archivo debe ser el número de identificación, por ejemplo:
 
 ```text
 base_datos/
